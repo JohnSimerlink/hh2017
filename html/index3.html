@@ -1,0 +1,67 @@
+<?php 
+ require_once 'header.php';
+?>
+
+    <body>
+
+
+      <ul id="slide-out" class="side-nav fixed black">
+	    <li><a href="#!">First Sidebar Link</a></li>
+	    <li><a href="#!">Second Sidebar Link</a></li>
+  	  </ul>
+	  <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+
+	<div id='container'>
+	     <canvas id="c"></canvas>
+	     <div id='message'	
+			  <div class="row" style='style="position: absolute; left: 200px; top: 200px; width:200px; height:100px;'>
+		        <div class="col s12 m6">
+		          <div class="card black darken-1">
+		            <div class="card-content green-text">
+		              <span class="card-title">Card Title</span>
+		              <p>I am a very simple card. I am good at containing small bits of information.
+		              I am convenient because I require little markup to use effectively.</p>
+		            </div>
+		            <div class="card-action green-text">
+		              <form>
+				        <input id="first_name" type="text" >
+				          <button class="btn waves-effect waves-light green" type="submit" name="action">Submit
+    <i class="mdi-content-send right"></i>
+  </button>
+
+		              </form>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		     </div>
+	</div>
+	<style>
+	#message{
+    position : absolute;    
+    width    : 700px;
+    height   : 200px;
+    left     : 50%;
+    top      : 50%;
+    margin-left : -100px; /* half of the width  */
+    margin-top  : -100px; /* half of the height */
+	}
+	</style>
+
+
+
+
+
+
+
+
+
+
+   		 <script src="matrix_script.js"></script>
+
+	  <script>
+ 			$('.button-collapse').sideNav({menuWidth: 240, activationWidth: 70});
+	  </script>
+    </body>
+  </html>
+
