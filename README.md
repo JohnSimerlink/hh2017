@@ -1,1 +1,2 @@
-#Hacker Heaven\n\n A competition for TechOlympics
+#Hacker Heaven
+A competition for TechOlympics
