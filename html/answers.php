@@ -2,7 +2,7 @@
 session_start();
 require_once '../includes/functions.php';
 
-$answers = array('password', 'h4cking', 'welcometohex', 'noob', 'answer4usesafunction', 'qwerty123');
+$answers = array('123456', 'techolymipcs', 'welcometohex', 'noob', 'answer4usesafunction', 'qwerty123');
 
 if (isset($_POST['password'])){
 

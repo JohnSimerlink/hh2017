@@ -12,7 +12,7 @@ echo "file called";
             <div class="card black darken-1">
               <div class="card-content green-text">
                 <span class="card-title">Hacker Heaven</span>
-                <p>Crack the Password. Hint: Everyone knows this one.</p>
+                <p>Welcome to Hacker Heaven. Enter the password </p>
               </div>
               <div class="card-action green-text">
                 <form id='answerForm'>
@@ -33,7 +33,7 @@ html;
   $questions[1] = <<<html
       <script>
         function checkPassword(){
-          if($('#password').val() == 'h4cking'){
+          if($('#password').val() == 'techolympics'){
             alert('correct'); return true;
           }
           else{
@@ -48,7 +48,7 @@ html;
             <div class="card black darken-1">
               <div class="card-content green-text">
                 <span class="card-title">Question 1</span>
-                <p>Wow. Betchu think you're a hacker.</p>
+                <p>Aight. Not Bad. One down.</p>
               </div>
               <div class="card-action green-text">
                 <form id='answerForm' onsubmit='return checkPassword()'>
@@ -97,8 +97,8 @@ html;
           <div class="col s12 m6">
             <div class="card black darken-1">
               <div class="card-content green-text">
-                <span class="card-title">Let's keep hacking now.</span>
-                <p>Hint: What is two less than an octagon?</p>
+                <span class="card-title">Hey you're pretty smart.</span>
+                <p>what shape is a pentagon?</p>
               </div>
               <div class="card-action green-text">
                 <form id='answerForm' onsubmit='return checkPassword()'>
