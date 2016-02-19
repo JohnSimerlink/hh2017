@@ -6,7 +6,7 @@ require_once 'questions.php';
 $answers = array('123456', 'techolymipcs', 'welcometohex', 'noob', 'answer4usesafunction', 'qwerty123');
 
 $questionNumber = substr($_POST['qn'], -1);
-echo $_POST['qn'];
+
 
 
 switch ($questionNumber) {
@@ -33,7 +33,7 @@ switch ($questionNumber) {
 		break;
 }
 
-echo "qusion number is $questionNumber";
+echo $questionNumber + "is quesion number";
 function answer4($username, $password, $dbh){
 	$userId = 1;
 	$sql = "SELECT password, is_admin FROM users WHERE username = '$username'";//still allow a certain level of sql injection
