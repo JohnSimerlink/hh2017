@@ -78,7 +78,7 @@ if (isset($_POST['password'])){
 			$response = 'HTML' + $questions[$questionNumber + 1];
 		}
 		else {
-			$response = "incorrect answer of " + $_POST['password'] + " for question " + $questionNumber + "whose answer acutally is " + $answers[$questionNumber];// Your answer was . ' . $_POST['password'] . " the correct answer was " . $answers[$_SESSION['questionNumber']] . "your question number is " . $_SESSION['questionNumber'];
+			$response = "incorrect answer of " . $_POST['password'] . " for question " . $questionNumber . "whose answer acutally is " . $answers[$questionNumber];// Your answer was . ' . $_POST['password'] . " the correct answer was " . $answers[$_SESSION['questionNumber']] . "your question number is " . $_SESSION['questionNumber'];
 		}
 	}
 	echo $response;
