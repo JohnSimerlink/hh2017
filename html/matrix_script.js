@@ -55,13 +55,31 @@ function draw(color)
 	}
 }
 
-var drawGreenInterval = setInterval(drawPurple, 33);
+var drawInterval = setInterval(drawPurple, 33);
 console.log("draw green intreval is", drawGreenInterval);
 
-function drawGreen(){
+function drawgreen(){
 	draw("#00ff00");
 }
 
-function drawPurple(){
+function drawpurple(){
 	draw("#551a8b");
+}
+
+function drawpurple(){
+	draw("white");
+}
+
+function drawpurple(){
+	draw("red");
+}
+
+function drawpurple(){
+	draw("yellow");
+}
+
+
+function setColor(color){
+	clearInterval(setColor.intervalId);
+	setColor.intervalId = setInterval(draw+window[color], 33);
 }
