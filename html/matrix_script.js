@@ -88,8 +88,21 @@ function drawtomato(){
 function drawdeeppink(){
 	draw("deeppink")
 }
+function drawblue(){
+	draw("navy")
+}
+
+function drawmagenta(){
+	draw("magenta")
+}
+
+function drawinvisible(){
+	draw("#AA0000")
+}
 
 function setColor(color){
 	clearInterval(setColor.intervalId);
 	setColor.intervalId = setInterval(window["draw"+color], 33);
 }
+
+//green red yellow white navy magenta invisible
