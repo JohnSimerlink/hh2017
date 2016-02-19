@@ -71,15 +71,16 @@ if (isset($_POST['password'])){
 	if($questionNumber == 4){
 		$correct= answer4($_POST['username'], $_POST['password'], $dbh);
 		if ($correct == true){
+			$nextQuestionNumber = $questionNumber + 1;
 			//$_SESSION['questionNumber'] = $_SESSION['questionNumber']+1;
-			$response = 'HTML' . $questions[$questionNumber + 1];
+			$response = 'HTML' . $questions[$questionNumber + 1] . "<script>setColor('" . $color[$nextQuestionNumber] . "');</script>";;
 		}
 		else $response = 'incorrect';
 	}
 	else{ 
 		if($_POST['password'] == $answers[$questionNumber]){
 			$nextQuestionNumber = $questionNumber + 1;
-			$response = "HTML" . "next question number is $nextQuestionNumber and the question is " . $questions[$nextQuestionNumber] . "<script>setColor('" . $color[$nextQuestionNumber] . "');</script>";
+			$response = "HTML". $questions[$nextQuestionNumber] . "<script>setColor('" . $color[$nextQuestionNumber] . "');</script>";
 			//echo "question number is $questionNumber. answer = " . $answers[$questionNumber] . ",  Users answer was: $password.";
 		}
 		else {
