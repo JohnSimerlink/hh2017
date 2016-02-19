@@ -7,6 +7,33 @@ $answers = array('123456', 'techolymipcs', 'welcometohex', 'noob', 'answer4usesa
 
 $questionNumber = mb_substr($_POST['qn'], -1);
 
+
+
+switch ($questionNumber) {
+	case 'a':
+		$questionNumber = 0;
+		break;
+	case 'r':
+		$questionNumber = 1;
+		break;
+	case 's':
+		$questionNumber = 2;
+		break;
+	case 't':
+		$questionNumber = 3;
+		break;
+	case 'd':
+		$questionNumber = 4;
+		break;
+	case 'h':
+		$questionNumber = 5;
+		break;
+	default:
+		$questionNumber = 0;
+		break;
+}
+
+echo $questionNumber + "is quesion number";
 function answer4($username, $password, $dbh){
 	$userId = 1;
 	$sql = "SELECT password, is_admin FROM users WHERE username = '$username'";//still allow a certain level of sql injection
@@ -35,30 +62,6 @@ function answer4($username, $password, $dbh){
     	return false;
     }
  
-}
-
-switch ($questionNumber) {
-	case 'a':
-		$questionNumber = 0;
-		break;
-	case 'r':
-		$questionNumber = 1;
-		break;
-	case 's':
-		$questionNumber = 2;
-		break;
-	case 't':
-		$questionNumber = 3;
-		break;
-	case 'd':
-		$questionNumber = 4;
-		break;
-	case 'h':
-		$questionNumber = 5;
-		break;
-	default:
-		$questionNumber = 0;
-		break;
 }
 
 if (isset($_POST['password'])){
