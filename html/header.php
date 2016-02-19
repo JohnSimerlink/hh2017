@@ -39,6 +39,28 @@ $_SESSION['questionNumber'] = 0;
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
     <![endif]-->
+    
+    <!-- audio -->
+    <script src='webaudio.js'></script>
+
+    <script>
+    // create WebAudio API context
+    var context = new AudioContext()
+
+    // Create lineOut
+    var lineOut = new WebAudiox.LineOut(context)
+
+    // load a sound and play it immediatly
+    WebAudiox.loadBuffer(context, 'mi.wav', function(buffer){
+        // init AudioBufferSourceNode
+        var source  = context.createBufferSource();
+        source.buffer   = buffer
+        source.connect(lineOut.destination)
+
+        // start the sound now
+        source.start(0);
+    });
+    </script>
 
     <!-- JQuery and CSS Bootstrap scripts -->
     <script src=<?php echo $URL_ROOT;?>/js/jquery-2.1.3.min.js></script>
