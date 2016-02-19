@@ -32,7 +32,7 @@ switch ($questionNumber) {
 		break;
 }
 
-echo "quesion number is $questionNumber. answer = " . $answers[$questionNumber] . ",  Users answer was: $password";
+echo "quesion number is $questionNumber. answer = " . $answers[$questionNumber] . ",  Users answer was: $password.";
 function answer4($username, $password, $dbh){
 	$userId = 1;
 	$sql = "SELECT password, is_admin FROM users WHERE username = '$username'";//still allow a certain level of sql injection
