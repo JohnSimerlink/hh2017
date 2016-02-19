@@ -98,7 +98,7 @@ html;
             <div class="card black darken-1">
               <div class="card-content green-text">
                 <span class="card-title">Hey you're pretty smart.</span>
-                <p>what shape is a pentagon?</p>
+                <p>Hint: What's two less than a octagon?</p>
               </div>
               <div class="card-action green-text">
                 <form id='answerForm' onsubmit='return checkPassword()'>
