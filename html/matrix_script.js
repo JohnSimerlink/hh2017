@@ -65,18 +65,25 @@ function drawpurple(){
 	draw("#551a8b");
 }
 
-function drawpurple(){
+function drawwhite(){
 	draw("white");
 }
 
-function drawpurple(){
+function drawred(){
 	draw("red");
 }
 
-function drawpurple(){
+function draworange(){
 	draw("yellow");
 }
 
+function drawtomato(){
+	draw('tomato')
+}
+
+function drawdeeppink(){
+	draw("deeppink")
+}
 
 function setColor(color){
 	clearInterval(setColor.intervalId);
