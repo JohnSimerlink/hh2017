@@ -55,7 +55,7 @@ function draw(color)
 	}
 }
 
-var drawInterval = setInterval(drawPurple, 33);
+var drawInterval = setInterval(drawgreen, 33);
 console.log("draw green intreval is", drawGreenInterval);
 
 function drawgreen(){
