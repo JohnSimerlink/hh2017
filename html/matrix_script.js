@@ -28,7 +28,7 @@ for(var x = 0; x < columns; x++)
 	drops[x] = 1; 
 
 //drawing the characters
-function draw()
+function draw(color)
 {
 	//Black BG for the canvas
 	//translucent BG to show trail
@@ -55,7 +55,13 @@ function draw()
 	}
 }
 
-setInterval(draw, 33);
+var drawGreenInterval = setInterval(drawGreen, 33);
+console.log("draw green intreval is", drawGreenInterval);
 
+function drawGreen(){
+	draw("#00ff00");
+}
 
-
+function drawPurple(){
+	draw("#551a8b");
+}
