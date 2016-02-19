@@ -26,6 +26,21 @@ session_start();
             </div>
           </div>
         </div>
+        <!--
+
+        Most common passwords used by users in 2013:
+        123456
+        password
+        12345678
+        qwerty
+        abc123
+        123456789
+        111111
+        1234567
+        iloveyou
+        adobe123
+
+        -->
 html;
 
 
