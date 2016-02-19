@@ -71,6 +71,8 @@ $_SESSION['questionNumber'] = 0;
         success: function(result){
           //alert(result);
           if (result.substring(0,4) == 'HTML'){
+            var newQuestion = result.substring(4);
+            console.log('newQuestion,', newQuestion);
             $('#message').html(result.substring(4))
           } else {
             alert('incorrect')
