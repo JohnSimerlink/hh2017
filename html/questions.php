@@ -283,5 +283,3 @@ html;
         </div>
 
 html;
-
-echo "end of questions.php";
