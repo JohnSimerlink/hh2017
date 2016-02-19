@@ -64,9 +64,9 @@ $_SESSION['questionNumber'] = 0;
 
     //alert('loaded');
 
-    function makeAjaxForm(selector){
+    function makeAjaxForm(selector, url){
       $(selector).ajaxForm({
-        url: "answers.php",
+        url: url,
         type: "post",
         success: function(result){
           alert(result);
@@ -77,7 +77,7 @@ $_SESSION['questionNumber'] = 0;
       });
     }
 
-    makeAjaxForm('#answerForm');
+    makeAjaxForm('#answerForm', 'answers.php');
 
     function goToFirstUncompleteQuestion(){
       var currentMessageIdentifier = $('#identifier').text();
@@ -88,7 +88,7 @@ $_SESSION['questionNumber'] = 0;
         success: function(result){
           //alert(result);
           $('#message').html(result);
-          makeAjaxForm('#answerForm');
+          makeAjaxForm('#answerForm', 'answers.php');
         }
       });
     }
