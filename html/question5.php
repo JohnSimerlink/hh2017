@@ -6,7 +6,7 @@ if (isset($_POST['fav_number'])){
 	$fav_number= $_POST['fav_number']; 
 
 
-	$mysqli = new mysqli(constant("HOST"), constant("SESSION_USER"), constant("SESSION_PASSWORD"), constant("SESSION_DATABASE"));
+	$mysqli = new mysqli(constant("DATA_HOST"), constant("DATA_USER"), constant("DATA_PASSWORD"), constant("DATA_DATABASE"));
 	//$sql = "SELECT username, LastName, FirstName FROM users WHERE zipcode = " . $zipcode;
 	$sql = "SELECT username, fav_number FROM secure_users WHERE fav_number = " . $fav_number;
 

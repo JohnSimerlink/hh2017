@@ -212,3 +212,84 @@ html;
           </div>
         </div>
 html;
+
+
+
+  $questions[5] = <<<html
+      <span id='identifier' hidden>4</span>
+      <div class="row" style='style="position: absolute; left: 200px; top: 200px; width:200px; height:100px;'>
+          <div class="col s12 m6">
+            <div class="card black darken-1">
+              <div class="card-content green-text">
+                <span class="card-title">Welcome to the Admin Panel.</span>
+                <p>Below is a search form to see who's favorite number is what in our very secure secure_users table. Your objective: login to the Pentagon. This is your final objective.</p>
+              </div>              
+                <div class="card-action green-text">
+                  <form id='question5'>
+                    <div class="input-field col s12 green-text">
+                      <input id="fav_number" name = "fav_number" type="text" class="validate">
+                      <label for="fav_number">Favorite Number</label>
+                    </div>
+                    <button class="btn waves-effect waves-light green" type="submit" name="action">Search For Users
+                      <i class="mdi-content-send right"></i>
+                    </button>
+                    <div id='question5response'></div>
+                  </form>
+                  <script>
+                  $('#question5').ajaxForm({
+                    url: "question5.php",
+                    type: "post",
+                    success: function(result){
+                      //alert(result);
+                      $('#question5response').html(result);
+                    }
+                  });
+                  </script>
+                </div>
+
+              
+              <div class="card-action green-text">
+                <form id='answerForm'>
+                  <input hidden name='qn' value='4bt65b6fc5a67h'>
+                  <div class="input-field col s6 green-text">
+                    <input id="username" name = "username" type="text" class="validate">
+                    <label for="username">Username</label>
+                  </div>
+                  <div class="input-field col s6 green-text">
+                    <input id="password" name = "password" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+                  <button class="btn waves-effect waves-light green" type="submit" name="action">Submit
+                    <i class="mdi-content-send right"></i>
+                  </button>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+html;
+
+
+
+
+
+  $questions[6] = <<<html
+
+      <span id='identifier' hidden>nothing</span>
+      <div class="row" style='style="position: absolute; left: 200px; top: 200px; width:200px; height:100px;'>
+          <div class="col s12 m6">
+            <div class="card black darken-1">
+              <div class="card-content green-text">
+                <span class="card-title">CONGRATULATIONS! </span>
+               <p>YOU HAVE WON! Please contact your competition manager so that they can mark the time at which you finished.</p>
+          
+     </div>
+             <div class="card-action purple-text">
+             <span style='align:right'><a href='unsetSession.php'>Play Again</a></span>
+     </div> 
+            </div>
+          </div>
+        </div>
+
+html;
