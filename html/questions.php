@@ -119,3 +119,96 @@ html;
           </div>
         </div>
 html;
+
+
+
+  $questions[3] = <<<html
+      <script>
+        var hasPermission = false;
+        function permission(){
+          if (!hasPermission) alert ("You do not have the sufficient priveleges to complete this task. Noob.");
+          return hasPermission;
+        }
+      </script>
+      <span id='identifier' hidden>3</span>
+      <div class="row" style='style="position: absolute; left: 200px; top: 200px; width:200px; height:100px;'>
+          <div class="col s12 m6">
+            <div class="card black darken-1">
+              <div class="card-content green-text">
+                <span class="card-title">The password is 'noob'</span>
+                <p>Really, it is.</p>
+              </div>
+              <div class="card-action green-text">
+                <form id='answerForm' onsubmit ='return permission()'>
+                  <input hidden name='qn' value='4bt65b6fc5a67t'>
+                  <div class="input-field col s12 green-text">
+                    <input id="password" name = "password" type="password" class="validate">
+                    <label for="first_name">Password</label>
+                  </div>
+                  <button class="btn waves-effect waves-light green" type="submit" name="action">Submit
+                    <i class="mdi-content-send right"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+html;
+
+
+
+  $questions[4] = <<<html
+      <span id='identifier' hidden>4</span>
+      <div class="row" style='style="position: absolute; left: 200px; top: 200px; width:200px; height:100px;'>
+          <div class="col s12 m6">
+            <div class="card black darken-1">
+              <div class="card-content green-text">
+                <span class="card-title">Objective: Login as an administrator</span>
+                <p>Hint: What users are Located in the zipcode where INTERalliance's Office is Located?</p>
+              </div>              
+                <div class="card-action green-text">
+                  <form id='question4'>
+
+                    <div class="input-field col s12 green-text">
+                      <input id="zipcode" name = "zipcode" type="text" class="validate">
+                      <label for="zipcode">Zipcode</label>
+                    </div>
+                    <button class="btn waves-effect waves-light green" type="submit" name="action">Search For Users
+                      <i class="mdi-content-send right"></i>
+                    </button>
+                    <div id='question4response'></div>
+                  </form>
+                  <script>
+                  $('#question4').ajaxForm({
+                    url: "question4.php",
+                    type: "post",
+                    success: function(result){
+                      //alert(result);
+                      $('#question4response').html(result);
+                    }
+                  });
+                  </script>
+                </div>
+
+              
+              <div class="card-action green-text">
+                <form id='answerForm'>
+                  <input hidden name='qn' value='4bt65b6fc5a67d'>
+                  <div class="input-field col s6 green-text">
+                    <input id="username" name = "username" type="text" class="validate">
+                    <label for="username">Username</label>
+                  </div>
+                  <div class="input-field col s6 green-text">
+                    <input id="password" name = "password" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+                  <button class="btn waves-effect waves-light green" type="submit" name="action">Submit
+                    <i class="mdi-content-send right"></i>
+                  </button>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+html;
