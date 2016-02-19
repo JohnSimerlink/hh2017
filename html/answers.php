@@ -32,7 +32,7 @@ switch ($questionNumber) {
 		break;
 }
 
-echo "quesion number is $questionNumber. answer = " . $answers[$questionNumber] . ",  Users answer was: $password.";
+//echo "quesion number is $questionNumber. answer = " . $answers[$questionNumber] . ",  Users answer was: $password.";
 function answer4($username, $password, $dbh){
 	$userId = 1;
 	$sql = "SELECT password, is_admin FROM users WHERE username = '$username'";//still allow a certain level of sql injection
@@ -76,6 +76,8 @@ if (isset($_POST['password'])){
 	else{ 
 		if($_POST['password'] == $answers[$questionNumber]){
 			$response = 'HTML' + $questions[$questionNumber + 1];
+			echo "correct from server";
+			//echo "question number is $questionNumber. answer = " . $answers[$questionNumber] . ",  Users answer was: $password.";
 		}
 		else {
 			$response = "incorrect answer of " . $_POST['password'] . " for question " . $questionNumber . "whose answer acutally is " . $answers[$questionNumber];// Your answer was . ' . $_POST['password'] . " the correct answer was " . $answers[$_SESSION['questionNumber']] . "your question number is " . $_SESSION['questionNumber'];
