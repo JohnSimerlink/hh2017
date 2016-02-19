@@ -74,6 +74,10 @@ function drawred(){
 }
 
 function draworange(){
+	draw("orange");
+}
+
+function drawyellow(){
 	draw("yellow");
 }
 
