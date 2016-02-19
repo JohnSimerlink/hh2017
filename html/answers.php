@@ -75,8 +75,7 @@ if (isset($_POST['password'])){
 	}
 	else{ 
 		if($_POST['password'] == $answers[$questionNumber]){
-			$response = 'HTML' + $questions[$questionNumber + 1];
-			echo "correct from server";
+			$response = 'HTML' . $questions[$questionNumber + 1];
 			//echo "question number is $questionNumber. answer = " . $answers[$questionNumber] . ",  Users answer was: $password.";
 		}
 		else {
