@@ -4,7 +4,7 @@ session_start();
 //Note header.php must always be included by a file that is located in a subdirectory of public_html(e.g. it must be included by a file that is located in the home or app directory)
 require_once '../includes/functions.php';
 require_once 'register.php'; //included only to get the register_error_msg at the start. also because of the registration form submission.
-//require_once 'questions.php';
+require_once 'questions.php';
 
 $_SESSION['questionNumber'] = 0;
 
