@@ -65,6 +65,7 @@ $_SESSION['questionNumber'] = 0;
     //alert('loaded');
 
     function makeAjaxForm(selector, url){
+      alert('new form with selector', selector, ' was just made an ajax form')
       $(selector).ajaxForm({
         url: url,
         type: "post",
@@ -73,7 +74,8 @@ $_SESSION['questionNumber'] = 0;
           if (result.substring(0,4) == 'HTML'){
             var newQuestion = result.substring(4);
             console.log('newQuestion,', newQuestion);
-            $('#message').html(result.substring(4))
+            $('#message').html(result.substring(4));
+            makeAjaxForm('#answerForm', 'answers.php');
           } else {
             alert('incorrect')
           }
