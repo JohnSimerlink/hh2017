@@ -32,6 +32,9 @@ switch ($questionNumber) {
 		break;
 }
 
+//green red yellow white blue magenta invisible
+$color = array('green', 'red', 'yellow', 'white', 'blue', 'magenta', 'invisible');
+
 //echo "quesion number is $questionNumber. answer = " . $answers[$questionNumber] . ",  Users answer was: $password.";
 function answer4($username, $password, $dbh){
 	$userId = 1;
@@ -76,7 +79,7 @@ if (isset($_POST['password'])){
 	else{ 
 		if($_POST['password'] == $answers[$questionNumber]){
 			$nextQuestionNumber = $questionNumber + 1;
-			$response = "HTML" . "next question number is $nextQuestionNumber and the question is " . $questions[$nextQuestionNumber];
+			$response = "HTML" . "next question number is $nextQuestionNumber and the question is " . $questions[$nextQuestionNumber]; . "<script>setColor(" . $color[$questionNumber] . ");</script>";
 			//echo "question number is $questionNumber. answer = " . $answers[$questionNumber] . ",  Users answer was: $password.";
 		}
 		else {
