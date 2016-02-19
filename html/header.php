@@ -65,7 +65,6 @@ $_SESSION['questionNumber'] = 0;
     //alert('loaded');
 
     function makeAjaxForm(selector, url){
-      alert('new form with selector' + selector + ' was just made an ajax form')
       $(selector).ajaxForm({
         url: url,
         type: "post",
