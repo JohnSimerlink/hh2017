@@ -105,4 +105,4 @@ function setColor(color){
 	setColor.intervalId = setInterval(window["draw"+color], 33);
 }
 
-//green red yellow white navy magenta invisible
+//green red yellow white blue magenta invisible
