@@ -80,5 +80,5 @@ function drawpurple(){
 
 function setColor(color){
 	clearInterval(setColor.intervalId);
-	setColor.intervalId = setInterval(draw+window[color], 33);
+	setColor.intervalId = setInterval(window["draw"+color], 33);
 }
