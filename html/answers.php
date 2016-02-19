@@ -5,7 +5,7 @@ require_once 'questions.php';
 
 $answers = array('123456', 'techolymipcs', 'welcometohex', 'noob', 'answer4usesafunction', 'qwerty123');
 
-$questionNumber = mb_substr($_POST['qn'], -1);
+$questionNumber = substr($_POST['qn'], -1);
 
 
 
