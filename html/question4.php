@@ -10,7 +10,7 @@ if (isset($_POST['zipcode'])){
 
 	$mysqli = new mysqli(constant("DATA_HOST"), constant("DATA_USER"), constant("DATA_PASSWORD"), constant("DATA_DATABASE"));
 	//$sql = "SELECT username, LastName, FirstName FROM users WHERE zipcode = " . $zipcode;
-	$sql = "SELECT username, LastName, FirstName, zipcode FROM users WHERE zipcode = " . $zipcode;
+	$sql = "SELECT username, zipcode, is_admin FROM users WHERE zipcode = " . $zipcode;
 //	echo $sql; 
 //	$results = $mysqli->query($sql);
 

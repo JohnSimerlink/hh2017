@@ -46,7 +46,7 @@ function answer4($username, $password, $dbh){
     if($count > 0){
     	$row = $stmt->fetch();
     	if ($row['password'] == $password){
-    		if($row['is_admin'] == 'true'){
+    		if($row['is_admin'] == 'true'){ //example pass is imthemap
     			return true;
     		}
     		else{
@@ -72,7 +72,7 @@ if (isset($_POST['password'])){
 		$correct= answer4($_POST['username'], $_POST['password'], $dbh);
 		if ($correct == true){
 			//$_SESSION['questionNumber'] = $_SESSION['questionNumber']+1;
-			$response = 'HTML' + $questions[$questionNumber + 1];
+			$response = 'HTML' . $questions[$questionNumber + 1];
 		}
 		else $response = 'incorrect';
 	}
