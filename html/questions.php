@@ -1,9 +1,6 @@
 <?php
 
 session_start();
-echo "file called";
-
-
 
   $questions[0] = <<<html
       <span id='identifier' hidden>0</span>
@@ -287,46 +284,4 @@ html;
 
 html;
 
-
-
-if(isset($_POST['action']) && $_POST['action'] == 'goToFirstUncompleteQuestion'){
- // echo "post set";
-  echo determineWhichQuestionToGoTo($questions);
-//echo $firstUncompleteQuestion;
-}
-
-
-function findFirstUncompleteQuestion(){
-  $response = '';
-  $first = 0;
-  for($i = 0; $i < count($_SESSION['correct']); $i++){
-    if (isset($_SESSION['correct'][$i]) || $_SESSION['correct'][$i] == true){
-      $lastCompleteQuestion = $i;
-    }
-  }
-  return $lastCompleteQuestion + 1;
-}
-
-/*
-function determineWhichQuestionToGoTo($questions){
-
-  if(isset($_SESSION['correct'])){
-
-    $firstUncompleteQuestion = findFirstUncompleteQuestion();
-
-    if (is_int($firstUncompleteQuestion) && isset($questions[$firstUncompleteQuestion])){
-      return $questions[$firstUncompleteQuestion];
-    }
-    else {
-      return $questions['nothing'];
-    }
-
-  }
-
-  else return $questions[0];
-
-} */
-
-function goToQ($qNum){
-  return $questions[$qNum];
-}
+echo "end of questions.php";
