@@ -69,7 +69,6 @@ if (isset($_POST['password'])){
 	if($questionNumber == 4){
 		$correct= answer4($_POST['username'], $_POST['password'], $dbh);
 		if ($correct == true){
-			$_SESSION['correct'][$questionNumber] = true;
 			//$_SESSION['questionNumber'] = $_SESSION['questionNumber']+1;
 			$response = 'HTML' + $questions[$questionNumber + 1];
 		}
@@ -77,12 +76,10 @@ if (isset($_POST['password'])){
 	}
 	else{ 
 		if($_POST['password'] == $answers[$questionNumber]){
-		
-		$_SESSION['correct'][$questionNumber] = true;
-		$response = 'HTML' + $questions[$questionNumber + 1];
+			$response = 'HTML' + $questions[$questionNumber + 1];
 		}
 		else {
-			$response = 'incorrect';// Your answer was . ' . $_POST['password'] . " the correct answer was " . $answers[$_SESSION['questionNumber']] . "your question number is " . $_SESSION['questionNumber'];
+			$response = 'incorrect answer of ' + $_POST['password'] + " for question " + $questionNumber + "whose answer acutally is " + $answers[$questionNumber];// Your answer was . ' . $_POST['password'] . " the correct answer was " . $answers[$_SESSION['questionNumber']] . "your question number is " . $_SESSION['questionNumber'];
 		}
 	}
 	echo $response;

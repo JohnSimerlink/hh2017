@@ -70,7 +70,7 @@ $_SESSION['questionNumber'] = 0;
         type: "post",
         success: function(result){
           //alert(result);
-          if (result.subtr(0,4) == 'HTML'){
+          if (result.subtring(0,4) == 'HTML'){
             $('#message').html(result(4))
           } else {
             alert('incorrect')
