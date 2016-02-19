@@ -55,8 +55,7 @@ function draw(color)
 	}
 }
 
-var drawInterval = setInterval(drawgreen, 33);
-console.log("draw green intreval is", drawGreenInterval);
+setColor('green')
 
 function drawgreen(){
 	draw("#00ff00");
