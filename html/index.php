@@ -8,11 +8,11 @@
 </script>
 
     <body>
-      <? require_once 'loginMenu.php' ?>
+      <? /*require_once 'loginMenu.php'*/ ?>
     	<div id='container'>
     	<canvas id="c"></canvas>
         	     <div id='message' data-message=0>	
-    		<?php echo determineWhichQuestionToGoTo($questions); ?>
+    		<?php echo $questions[0]; ?>
        	     </div>
     	</div>
     	<style>

@@ -16,6 +16,7 @@ echo "file called";
               </div>
               <div class="card-action green-text">
                 <form id='answerForm'>
+                  <input hidden name='qn' value='4bt65b6fc5a67a'>
                   <div class="input-field col s12 green-text">
                     <input id="password" name = "password" type="password" class="validate">
                     <label for="first_name">Password</label>
@@ -34,7 +35,7 @@ html;
       <script>
         function checkPassword(){
           if($('#password').val() == 'techolympics'){
-            alert('correct'); return true;
+            return true;
           }
           else{
            alert('not correct');
@@ -52,6 +53,7 @@ html;
               </div>
               <div class="card-action green-text">
                 <form id='answerForm' onsubmit='return checkPassword()'>
+                 <input hidden name='qn' value='4bt65b6fc5a67r'>
                   <div class="input-field col s12 green-text">
                     <input id="password" name = "password" type="password" class="validate">
                     <label for="first_name">Password</label>
@@ -70,7 +72,7 @@ html;
         <script>
 
         function deencrypt(input){//hex
-          return h2a(input);
+          return hex2ascii(input);
         }
 
         function checkPassword(){
@@ -83,7 +85,7 @@ html;
           }
         }
 
-        function h2a(pStr) {
+        function hex2ascii(pStr) {
           tempstr = '';
           for (b = 0; b < pStr.length; b = b + 2) {
               tempstr = tempstr + String.fromCharCode(parseInt(pStr.substr(b, 2), 16));
@@ -102,6 +104,7 @@ html;
               </div>
               <div class="card-action green-text">
                 <form id='answerForm' onsubmit='return checkPassword()'>
+                  <input hidden name='qn' value='4bt65b6fc5a67s'>
                   <div class="input-field col s12 green-text">
                     <input id="password" name = "password" type="password" class="validate">
                     <label for="first_name">Password</label>
@@ -134,6 +137,7 @@ html;
               </div>
               <div class="card-action green-text">
                 <form id='answerForm' onsubmit ='return permission()'>
+                  <input hidden name='qn' value='4bt65b6fc5a67t'>
                   <div class="input-field col s12 green-text">
                     <input id="password" name = "password" type="password" class="validate">
                     <label for="first_name">Password</label>
@@ -159,6 +163,7 @@ html;
               </div>              
                 <div class="card-action green-text">
                   <form id='question4'>
+
                     <div class="input-field col s12 green-text">
                       <input id="zipcode" name = "zipcode" type="text" class="validate">
                       <label for="zipcode">Zipcode</label>
@@ -183,6 +188,7 @@ html;
               
               <div class="card-action green-text">
                 <form id='answerForm'>
+                  <input hidden name='qn' value='4bt65b6fc5a67d'>
                   <div class="input-field col s6 green-text">
                     <input id="username" name = "username" type="text" class="validate">
                     <label for="username">Username</label>
@@ -237,6 +243,7 @@ html;
               
               <div class="card-action green-text">
                 <form id='answerForm'>
+                  <input hidden name='qn' value='4bt65b6fc5a67h'>
                   <div class="input-field col s6 green-text">
                     <input id="username" name = "username" type="text" class="validate">
                     <label for="username">Username</label>
@@ -269,7 +276,7 @@ html;
               <div class="card-content green-text">
                 <span class="card-title">CONGRATULATIONS! </span>
                <p>YOU HAVE WON! Please contact your competition manager so that they can mark the time at which you finished.</p>
-           <!--  <p> Go to prom with me, Gracie? </p> -->
+          
 		 </div>
              <div class="card-action purple-text">
              <span style='align:right'><a href='unsetSession.php'>Play Again</a></span>
@@ -300,6 +307,7 @@ function findFirstUncompleteQuestion(){
   return $lastCompleteQuestion + 1;
 }
 
+/*
 function determineWhichQuestionToGoTo($questions){
 
   if(isset($_SESSION['correct'])){
@@ -317,4 +325,8 @@ function determineWhichQuestionToGoTo($questions){
 
   else return $questions[0];
 
+} */
+
+function goToQ($qNum){
+  return $questions[$qNum];
 }

@@ -69,9 +69,11 @@ $_SESSION['questionNumber'] = 0;
         url: url,
         type: "post",
         success: function(result){
-          alert(result);
-          if (result == 'correct'){
-            goToFirstUncompleteQuestion();
+          //alert(result);
+          if (result.subtr(0,4) == 'HTML'){
+            $('#message').html(result(4))
+          } else {
+            alert('incorrect')
           }
         }
       });
