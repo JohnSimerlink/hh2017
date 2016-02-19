@@ -35,7 +35,7 @@ function draw(color)
 	ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
 	ctx.fillRect(0, 0, c.width, c.height);
 	
-	ctx.fillStyle = "#00ff00"; //purple text = #551a8b
+	ctx.fillStyle = color; //purple text = #551a8b
 	ctx.font = font_size + "px arial";
 	//looping over drops
 	for(var i = 0; i < drops.length; i++)
@@ -55,7 +55,7 @@ function draw(color)
 	}
 }
 
-var drawGreenInterval = setInterval(drawGreen, 33);
+var drawGreenInterval = setInterval(drawPurple, 33);
 console.log("draw green intreval is", drawGreenInterval);
 
 function drawGreen(){
