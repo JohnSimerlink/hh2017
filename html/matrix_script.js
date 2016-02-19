@@ -97,7 +97,7 @@ function drawmagenta(){
 }
 
 function drawinvisible(){
-	draw("#AA0000")
+	draw("#131313")
 }
 
 function setColor(color){
