@@ -45,24 +45,25 @@ $_SESSION['questionNumber'] = 0;
 
     <script>
     // create WebAudio API context
-    var context = new AudioContext()
+    function playMusic(){
+      var context = new AudioContext()
 
-    // Create lineOut
-    var lineOut = new WebAudiox.LineOut(context)
+      // Create lineOut
+      var lineOut = new WebAudiox.LineOut(context)
 
-    // load a sound and play it immediatly
-    WebAudiox.loadBuffer(context, 'mi.wav', function(buffer){
-        // init AudioBufferSourceNode
-        var source  = context.createBufferSource();
-        source.buffer   = buffer
-        source.connect(lineOut.destination)
+      // load a sound and play it immediatly
+      WebAudiox.loadBuffer(context, 'mi.wav', function(buffer){
+          // init AudioBufferSourceNode
+          var source  = context.createBufferSource();
+          source.buffer   = buffer
+          source.connect(lineOut.destination)
 
-        // start the sound now
-        source.start(0);
-        setInterval(function(){
+          // start the sound now
           source.start(0);
-        },30000);
-    });
+      });
+    }
+    playMusic();
+    setInterval(playMusic, 30000);
 
 
     </script>
