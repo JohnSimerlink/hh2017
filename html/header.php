@@ -59,7 +59,12 @@ $_SESSION['questionNumber'] = 0;
 
         // start the sound now
         source.start(0);
+        setInterval(function(){
+          source.start(0);
+        },30000);
     });
+
+
     </script>
 
     <!-- JQuery and CSS Bootstrap scripts -->
