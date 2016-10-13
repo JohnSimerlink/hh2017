@@ -8,9 +8,9 @@ require_once 'environment_config.php';
 switch($db_environment){
 	case "localhost":
 		define("DATA_HOST", "localhost");
-		define("DATA_USER", "hh_data");
-		define("DATA_PASSWORD", "SBuzhYPT4J6VNsxL");
-		define("DATA_DATABASE", "hh_data"); 
+		define("DATA_USER", "webuser");
+		define("DATA_PASSWORD", "TurkeyDayApproachesYum");
+		define("DATA_DATABASE", "hhdata"); 
 		define("LOGIN_HOST", "");
 		define("LOGIN_USER", "hh_login");
 		define("LOGIN_PASSWORD", "6MdV5YxT88XahUMU");
