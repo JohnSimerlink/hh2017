@@ -11,5 +11,5 @@ try {
 
 catch(PDOException $ex) {
 //	echo "connection to database didn't work";
-	header("Location: ".$URL_ROOT."/error.php?err=DB_STARTUP_FAIL");
+	header("Location: ".$URL_ROOT."/error.php?err=DB_STARTUP_FAIL&msg=".DATA_HOST.DATA_DATABASE.DATA_USER.DATA_PASSWORD);
 }

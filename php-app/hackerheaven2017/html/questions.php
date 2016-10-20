@@ -48,7 +48,7 @@ html;
 $questions[1] = <<<html
     <script>
       function checkPassword(){
-        if($('#password').val() == 'techolympics'){
+        if($('#password').val() == 'interalliance42'){
           return true;
         }
         else{
@@ -92,7 +92,7 @@ html;
         }
 
         function checkPassword(){
-          if($('#password').val() == deencrypt('77656c636f6d65746f686578')){
+          if($('#password').val() == deencrypt('686172616d626568657861646563696d616c')){
             return true;
           }
           else{
@@ -150,7 +150,7 @@ html;
           <div class="col s12 m6">
             <div class="card black darken-1">
               <div class="card-content green-text">
-                <span class="card-title">The password is 'noob'</span>
+                <span class="card-title">The password is 'boatymcboatface'</span>
                 <p>Really, it is.</p>
               </div>
               <div class="card-action green-text">
@@ -179,7 +179,8 @@ html;
             <div class="card black darken-1">
               <div class="card-content green-text">
                 <span class="card-title">Objective: Login as an administrator</span>
-                <p>Hint: What users are Located in the zipcode where INTERalliance's Office is Located?</p>
+                <p>Hint: What users are Located in the zipcode where the millenium hotel's zip code is?</p>
+		<!-- Extra Hint: This step requires a sql injection. To learn more about SQL injections go to http://www.w3schools.com/sql/sql_injection.asp -->
               </div>              
                 <div class="card-action green-text">
                   <form id='question4'>
