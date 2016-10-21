@@ -1,13 +1,15 @@
 <?php
 require_once '../includes/functions.php';
-
+echo "hello world";
 
 if (isset($_POST['age'])){
+echo "again";
 
 	$age= $_POST['age']; 
 
 	$mysqli = new mysqli(constant("DATA_HOST"), constant("DATA_USER"), constant("DATA_PASSWORD"), constant("DATA_DATABASE"));
-	$sql = "SELECT username, age FROM people WHERE age = " . $age);
+	$sql = "SELECT username, age FROM people WHERE age > " . $age;
+echo "constructed";
 
 	if (!$mysqli->multi_query($sql)) {
 	    echo "Multi query failed: (" . $mysqli->errno . ") " . $mysqli->error;
@@ -26,4 +28,5 @@ if (isset($_POST['age'])){
 	    }
 	} while ($mysqli->more_results() && $mysqli->next_result());
 	echo "</ul>";
+
 }

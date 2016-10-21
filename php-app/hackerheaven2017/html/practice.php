@@ -10,8 +10,8 @@
       <? /*require_once 'loginMenu.php'*/ ?>
       <div id='container'>
       <canvas id="c"></canvas>
-               <div id='message' data-message=0>  
-        <?php echo $questions[0]; ?>
+               <div id='message' data-message=7>  
+      <?php echo $questions[7]; ?> 
              </div>
       </div>
       <style>

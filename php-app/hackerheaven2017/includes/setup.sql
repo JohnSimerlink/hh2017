@@ -40,10 +40,3 @@ INSERT into people VALUES (4, 'shaquille', '6\' 12"', 42);
 INSERT into people VALUES (5, 'techolympics', 'NA', 8);
 
 GRANT select ON hhdata.* to 'webuser2'@'localhost' IDENTIFIED by 'TurkeyDayApproachesYum';
-
-
-
-
-
-
-
