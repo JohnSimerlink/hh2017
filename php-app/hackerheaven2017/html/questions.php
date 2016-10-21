@@ -181,6 +181,9 @@ html;
                 <span class="card-title">Objective: Login as an administrator</span>
                 <p>Hint: What users are Located in the zipcode where the millenium hotel's zip code is?</p>
 		<!-- Extra Hint: This step requires a sql injection. To learn more about SQL injections go to http://www.w3schools.com/sql/sql_injection.asp -->
+		<!-- Extra Hint: This step requires a sql injection. To learn more about SQL injections go to http://www.w3schools.com/sql/sql_injection.asp -->
+                <!-- To practice doing a sql injection go  to this link: ____ -->
+                <!-- The name of the table that the users are stored in is "users" -->
               </div>              
                 <div class="card-action green-text">
                   <form id='question4'>
@@ -310,3 +313,68 @@ html;
         </div>
 
 html;
+
+  $questions[7] = <<<html
+      <span id='identifier' hidden>4</span>
+      <div class="row" style='style="position: absolute; left: 200px; top: 200px; width:200px; height:100px;'>
+          <div class="col s12 m6">
+            <div class="card black darken-1">
+              <div class="card-content green-text">
+                <span class="card-title">Introduction to SQL injections</span>
+                <p>Hint: What users are Located in the zipcode where the millenium hotel's zip code is?</p>
+		<p>Web Programs often obtain data from a database using a language called SQL. In SQL you can select rows from a database table with the following syntax: `SELECT column1, column2 from table WHERE columnX = something;`</p>
+		<p>To SELECT all rows in a table called people, where each row's value in the "age" column is over 14 we could type `SELECT username, age from people where age > 14;`</p>
+		<p>The above would only return certain columns for each row. To make the above query return all columns for each row we could type `SELECT * from people where age > 14;`</p>
+
+		<!-- Extra Hint: This step requires a sql injection. To learn more about SQL injections go to http://www.w3schools.com/sql/sql_injection.asp -->
+		<!-- Extra Hint: This step requires a sql injection. To learn more about SQL injections go to http://www.w3schools.com/sql/sql_injection.asp -->
+                <!-- To practice doing a sql injection go  to this link: ____ -->
+                <!-- The name of the table that the users are stored in is "users" -->
+              </div>              
+                <div class="card-action green-text">
+                  <form id='question4'>
+
+                    <div class="input-field col s12 green-text">
+                      <input id="zipcode" name = "zipcode" type="text" class="validate">
+                      <label for="zipcode">Zipcode</label>
+                    </div>
+                    <button class="btn waves-effect waves-light green" type="submit" name="action">Search For Users
+                      <i class="mdi-content-send right"></i>
+                    </button>
+                    <div id='question4response'></div>
+                  </form>
+                  <script>
+                  $('#question4').ajaxForm({
+                    url: "question4.php",
+                    type: "post",
+                    success: function(result){
+                      //alert(result);
+                      $('#question4response').html(result);
+                    }
+                  });
+                  </script>
+                </div>
+
+              
+              <div class="card-action green-text">
+                <form id='answerForm'>
+                  <input hidden name='qn' value='4bt65b6fc5a67d'>
+                  <div class="input-field col s6 green-text">
+                    <input id="username" name = "username" type="text" class="validate">
+                    <label for="username">Username</label>
+                  </div>
+                  <div class="input-field col s6 green-text">
+                    <input id="password" name = "password" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+                  <button class="btn waves-effect waves-light green" type="submit" name="action">Submit
+                    <i class="mdi-content-send right"></i>
+                  </button>
+                </form>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+html;
+

@@ -1,15 +1,13 @@
 <?php
 require_once '../includes/functions.php';
 
-if (isset($_POST['fav_number'])){
 
-	$fav_number= $_POST['fav_number']; 
+if (isset($_POST['age'])){
 
+	$age= $_POST['age']; 
 
 	$mysqli = new mysqli(constant("DATA_HOST"), constant("DATA_USER"), constant("DATA_PASSWORD"), constant("DATA_DATABASE"));
-	$sql = "SELECT username, fav_number FROM secure_users WHERE fav_number = " . $fav_number;
-
-	$results = $mysqli->query($sql);
+	$sql = "SELECT username, age FROM people WHERE age = " . $age);
 
 	if (!$mysqli->multi_query($sql)) {
 	    echo "Multi query failed: (" . $mysqli->errno . ") " . $mysqli->error;
@@ -29,4 +27,3 @@ if (isset($_POST['fav_number'])){
 	} while ($mysqli->more_results() && $mysqli->next_result());
 	echo "</ul>";
 }
-

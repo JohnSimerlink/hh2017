@@ -2,7 +2,7 @@
 session_start();
 require_once '../includes/functions.php';
 require_once 'questions.php';
-$answers = array('qwerty', 'interalliance42', 'harambehexadecimal', 'boatymcboatface', 'answer4usesafunction', 'qwerty123');
+$answers = array('qwerty', 'interalliance42', 'harambehexadecimal', 'boatymcboatface', 'answer4usesafunction', 'iswise');
 
 $questionNumber = substr($_POST['qn'], -1);
 $password = $_POST['password'];
