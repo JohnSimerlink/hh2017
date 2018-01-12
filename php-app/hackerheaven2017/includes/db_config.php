@@ -1,6 +1,6 @@
 <?php
 require_once 'environment_config.php';
-switch($db_environment){
+switch($db_environment) {
 	case "localhost":
 		define("DATA_HOST", "localhost");
 		define("DATA_USER", "webuser2");
