@@ -8,7 +8,9 @@ session_start();
             <div class="card black darken-1">
               <div class="card-content green-text">
                 <span class="card-title">Hacker Heaven</span>
-                <p>Welcome to Hacker Heaven. Enter the password </p>
+		<h4> Challenge 1 </h4>
+                <p>Welcome to Hacker Heaven. Use your hacking skills to find the first challenge's password.</p>
+		<p style="font-size:10">Note: Use Chrome or Firefox </p>
               </div>
               <div class="card-action green-text">
                 <form id='answerForm'>
@@ -45,26 +47,27 @@ html;
 
 
 $questions[1] = <<<html
-    <script>
-      function checkPassword(){
-        if($('#password').val() == 'interalliance42'){
-          return true;
-        }
-        else{
-         alert('not correct');
-          return false;
-        }
-      }
-    </script>
     <span id='identifier' hidden>1</span>
     <div class="row" style='style="position: absolute; left: 200px; top: 200px; width:200px; height:100px;'>
         <div class="col s12 m6">
           <div class="card black darken-1">
             <div class="card-content green-text">
-              <span class="card-title">Question 1</span>
+              <span class="card-title">Challenge 2</span>
               <p>Aight. Not Bad. One down.</p>
+		<p> This challenge may require some knowledge of Javascript.</p>
             </div>
             <div class="card-action green-text">
+	    <script>
+	      function checkPassword(){
+		if($('#password').val() == 'interalliance42'){
+		  return true;
+		}
+		else{
+		 alert('not correct');
+		  return false;
+		}
+	      }
+	    </script>
               <form id='answerForm' onsubmit='return checkPassword()'>
                <input hidden name='qn' value='4bt65b6fc5a67r'>
                 <div class="input-field col s12 green-text">
