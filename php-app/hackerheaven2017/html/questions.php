@@ -32,14 +32,15 @@ session_start();
         Most common passwords used by users in 2013:
         123456
         password
+        iloveyou
         12345678
         qwerty
         abc123
         123456789
         111111
         1234567
-        iloveyou
         adobe123
+	interallianceisawesome (ok, maybe this isn't too common of a password . . .)
 
         -->
 html;
@@ -51,15 +52,15 @@ $questions[1] = <<<html
     <div class="row" style='style="position: absolute; left: 200px; top: 200px; width:200px; height:100px;'>
         <div class="col s12 m6">
           <div class="card black darken-1">
-            <div class="card-content green-text">
+            <div class="card-content red-text">
               <span class="card-title">Challenge 2</span>
               <p>Aight. Not Bad. One down.</p>
 		<p> This challenge may require some knowledge of Javascript.</p>
             </div>
-            <div class="card-action green-text">
+            <div class="card-action red-text">
 	    <script>
 	      function checkPassword(){
-		if($('#password').val() == 'interalliance42'){
+		if($('#password').val() == 'itcareerscamp'){
 		  return true;
 		}
 		else{
@@ -70,11 +71,11 @@ $questions[1] = <<<html
 	    </script>
               <form id='answerForm' onsubmit='return checkPassword()'>
                <input hidden name='qn' value='4bt65b6fc5a67r'>
-                <div class="input-field col s12 green-text">
+                <div class="input-field col s12 red-text">
                   <input id="password" name = "password" type="password" class="validate">
                   <label for="first_name">Password</label>
                 </div>
-                <button class="btn waves-effect waves-light green" type="submit" name="action">Submit
+                <button class="btn waves-effect waves-light red" type="submit" name="action">Submit
                   <i class="mdi-content-send right"></i>
                 </button>
               </form>
@@ -94,7 +95,7 @@ html;
         }
 
         function checkPassword(){
-          if($('#password').val() == deencrypt('686172616d626568657861646563696d616c')){
+          if($('#password').val() == deencrypt('636173686d656f757473696465')){
             return true;
           }
           else{
@@ -116,18 +117,18 @@ html;
       <div class="row" style='style="position: absolute; left: 200px; top: 200px; width:200px; height:100px;'>
           <div class="col s12 m6">
             <div class="card black darken-1">
-              <div class="card-content green-text">
+              <div class="card-content yellow-text">
                 <span class="card-title">Hey you're pretty smart.</span>
                 <p>Hint: 2 is to binary as 16 is to . . . </p>
               </div>
-              <div class="card-action green-text">
+              <div class="card-action yellow-text">
                 <form id='answerForm' onsubmit='return checkPassword()'>
                   <input hidden name='qn' value='4bt65b6fc5a67s'>
-                  <div class="input-field col s12 green-text">
+                  <div class="input-field col s12 yellow-text">
                     <input id="password" name = "password" type="password" class="validate">
                     <label for="first_name">Password</label>
                   </div>
-                  <button class="btn waves-effect waves-light green" type="submit" name="action">Submit
+                  <button class="btn waves-effect waves-light yellow" type="submit" name="action">Submit
                     <i class="mdi-content-send right"></i>
                   </button>
                 </form>
@@ -151,18 +152,18 @@ html;
       <div class="row" style='style="position: absolute; left: 200px; top: 200px; width:200px; height:100px;'>
           <div class="col s12 m6">
             <div class="card black darken-1">
-              <div class="card-content green-text">
-                <span class="card-title">The password is 'boatymcboatface'</span>
+              <div class="card-content white-text">
+                <span class="card-title">The password is 'unitedairlines'</span>
                 <p>Really, it is.</p>
               </div>
-              <div class="card-action green-text">
+              <div class="card-action white-text">
                 <form id='answerForm' onsubmit ='return permission()'>
                   <input hidden name='qn' value='4bt65b6fc5a67t'>
-                  <div class="input-field col s12 green-text">
+                  <div class="input-field col s12 white-text">
                     <input id="password" name = "password" type="password" class="validate">
                     <label for="first_name">Password</label>
                   </div>
-                  <button class="btn waves-effect waves-light green" type="submit" name="action">Submit
+                  <button class="btn waves-effect waves-light white" type="submit" name="action">Submit
                     <i class="mdi-content-send right"></i>
                   </button>
                 </form>
@@ -179,21 +180,21 @@ html;
       <div class="row" style='style="position: absolute; left: 200px; top: 200px; width:200px; height:100px;'>
           <div class="col s12 m6">
             <div class="card black darken-1">
-              <div class="card-content green-text">
+              <div class="card-content blue-text">
                 <span class="card-title">Objective: Login as an administrator</span>
                 <p>Hint: What users are Located in the zipcode where the millenium hotel's zip code is?</p>
 		<!-- Extra Hint: This step requires a sql injection. To learn more about SQL injections go to http://www.w3schools.com/sql/sql_injection.asp -->
                 <!-- To practice doing a sql injection go  to this link: http://52.10.39.98/practice.php  -->
                 <!-- The name of the table that the users are stored in is "users" -->
               </div>              
-                <div class="card-action green-text">
+                <div class="card-action blue-text">
                   <form id='question4'>
 
-                    <div class="input-field col s12 green-text">
+                    <div class="input-field col s12 blue-text">
                       <input id="zipcode" name = "zipcode" type="text" class="validate">
                       <label for="zipcode">Zipcode</label>
                     </div>
-                    <button class="btn waves-effect waves-light green" type="submit" name="action">Search For Users
+                    <button class="btn waves-effect waves-light blue" type="submit" name="action">Search For Users
                       <i class="mdi-content-send right"></i>
                     </button>
                     <div id='question4response'></div>
@@ -211,18 +212,18 @@ html;
                 </div>
 
               
-              <div class="card-action green-text">
+              <div class="card-action blue-text">
                 <form id='answerForm'>
                   <input hidden name='qn' value='4bt65b6fc5a67d'>
-                  <div class="input-field col s6 green-text">
+                  <div class="input-field col s6 blue-text">
                     <input id="username" name = "username" type="text" class="validate">
                     <label for="username">Username</label>
                   </div>
-                  <div class="input-field col s6 green-text">
+                  <div class="input-field col s6 blue-text">
                     <input id="password" name = "password" type="password" class="validate">
                     <label for="password">Password</label>
                   </div>
-                  <button class="btn waves-effect waves-light green" type="submit" name="action">Submit
+                  <button class="btn waves-effect waves-light blue" type="submit" name="action">Submit
                     <i class="mdi-content-send right"></i>
                   </button>
                 </form>
