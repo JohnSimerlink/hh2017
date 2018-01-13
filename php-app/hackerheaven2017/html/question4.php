@@ -1,14 +1,9 @@
 <?php
 require_once '../includes/functions.php';
-
-
 if (isset($_POST['zipcode'])){
-
 	$zipcode= $_POST['zipcode']; 
-
 	$mysqli = new mysqli(constant("DATA_HOST"), constant("DATA_USER"), constant("DATA_PASSWORD"), constant("DATA_DATABASE"));
 	$sql = "SELECT username, zipcode, is_admin FROM users WHERE zipcode = " . $zipcode;
-
 	if (!$mysqli->multi_query($sql)) {
     echo "Multi query failed: (" . $mysqli->errno . ") " . $mysqli->error;
 	}

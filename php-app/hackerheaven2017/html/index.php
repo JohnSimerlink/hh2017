@@ -25,6 +25,14 @@
       margin-left : -100px; /* half of the width  */
       margin-top  : -100px; /* half of the height */
     }
+	#container {
+		width: 100%;
+		height: 100%;
+	}
+	canvas {
+		width: 100%;
+		height: 100%;
+	}
     </style>
 <?php
 

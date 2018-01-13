@@ -241,18 +241,18 @@ html;
       <div class="row" style='style="position: absolute; left: 200px; top: 200px; width:200px; height:100px;'>
           <div class="col s12 m6">
             <div class="card black darken-1">
-              <div class="card-content green-text">
+              <div class="card-content purple-text">
                 <span class="card-title">Welcome to the Admin Panel.</span>
                 <p>Below is a search form to see who's favorite number is what in our very secure secure_users table. Your objective: login to the Pentagon. This is your final objective.</p>
                 <p>Hint: You may find the following link helpful for decrypting hashes: <a href='https://crackstation.net/'> https://crackstation.net/</a> </p>
               </div>              
-                <div class="card-action green-text">
+                <div class="card-action purple-text">
                   <form id='question5'>
-                    <div class="input-field col s12 green-text">
+                    <div class="input-field col s12 purple-text">
                       <input id="fav_number" name = "fav_number" type="text" class="validate">
                       <label for="fav_number">Favorite Number</label>
                     </div>
-                    <button class="btn waves-effect waves-light green" type="submit" name="action">Search For Users
+                    <button class="btn waves-effect waves-light purple" type="submit" name="action">Search For Users
                       <i class="mdi-content-send right"></i>
                     </button>
                     <div id='question5response'></div>
@@ -270,18 +270,18 @@ html;
                 </div>
 
               
-              <div class="card-action green-text">
+              <div class="card-action purple-text">
                 <form id='answerForm'>
                   <input hidden name='qn' value='4bt65b6fc5a67h'>
-                  <div class="input-field col s6 green-text">
+                  <div class="input-field col s6 purple-text">
                     <input id="username" name = "username" type="text" class="validate">
                     <label for="username">Username</label>
                   </div>
-                  <div class="input-field col s6 green-text">
+                  <div class="input-field col s6 purple-text">
                     <input id="password" name = "password" type="password" class="validate">
                     <label for="password">Password</label>
                   </div>
-                  <button class="btn waves-effect waves-light green" type="submit" name="action">Submit
+                  <button class="btn waves-effect waves-light purple" type="submit" name="action">Submit
                     <i class="mdi-content-send right"></i>
                   </button>
                 </form>
