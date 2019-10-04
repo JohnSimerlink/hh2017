@@ -7,8 +7,10 @@
 - to login to the db do something like `mysql --username=USERNAME --host=localhost --password DATABASE_NAME`
 - make sure to not allow any MYSQL edit priveleges for mysql user that the php app will be using, or else a participant could pown the db
 - if you get a mysql connection error, make sure you have mysql running by running `sudo service mysqld start`
-- `cd hh2017/php-app/hackerheaven2017` && `docker run -v \`pwd\`:/var/www/hh -p 8090:80 -it linode/lamp /bin/bash`
+## Acutal instructions
+- `cd hh2017/php-app/hackerheaven2017`
+`docker run -v `pwd`:/var/www/hh -v $(pwd)/hackerheaven.tk.conf:/etc/apache2/conf.d/sites-enabled/hackerheaven.tk.conf -v $(pwd)/sites-enabled/:/etc/apache2/sites-enabled/ -p 8120:80 -it linode/lamp /bin/bash`
 ## Once inside of the docker container
 - `/etc/init.d/mysql stop`
 - `sudo mysqld_safe & mysql -u root`
-- now that you are inside of the mysql command line,  do `source includes/setup.sql`;`
+- now that you are inside of the mysql command line,  do `source includes/setup.sql`;
