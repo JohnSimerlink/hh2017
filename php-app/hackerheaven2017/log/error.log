@@ -1,0 +1,3 @@
+[Fri Oct 04 19:09:40.911697 2019] [core:error] [pid 184] (13)Permission denied: [client 127.0.0.1:42736] AH00035: access to / denied (filesystem path '/root/hh2') because search permissions are missing on a component of the path
+[Fri Oct 04 19:10:40.710107 2019] [core:error] [pid 185] (13)Permission denied: [client 127.0.0.1:42738] AH00035: access to / denied (filesystem path '/root/hh2') because search permissions are missing on a component of the path
+[Fri Oct 04 19:13:15.066650 2019] [core:error] [pid 189] (13)Permission denied: [client 127.0.0.1:42740] AH00035: access to / denied (filesystem path '/root/hh2') because search permissions are missing on a component of the path
