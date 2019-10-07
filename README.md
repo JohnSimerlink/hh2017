@@ -14,3 +14,6 @@
 - `/etc/init.d/mysql stop`
 - `sudo mysqld_safe & mysql -u root`
 - now that you are inside of the mysql command line,  do `source includes/setup.sql`;
+- `apt update`
+- `apt install php5-mysqlnd`
+- `service apache2 restart`

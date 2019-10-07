@@ -8,4 +8,3 @@ switch($db_environment) {
 		define("DATA_DATABASE", "hhdata"); 
 		break;	
 }
-
