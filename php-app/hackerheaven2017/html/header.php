@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-//Note header.php must always be included by a file that is located in a subdirectory of public_html(e.g. it must be included by a file that is located in the home or app directory)
+//Note header.php must always be included by a file that is locatedde in a subdirectory of public_html(e.g. it must be included by a file that is located in the home or app directory)
 require_once '../includes/functions.php';
 require_once 'questions.php';
 
@@ -30,6 +30,11 @@ $_SESSION['questionNumber'] = 0;
     <![endif]-->
     
     <!-- audio -->
+    <style>
+      html, body {
+        font-family: Courier;
+      }
+    </style>
     <script src='webaudio.js'></script>
 
     <script>
