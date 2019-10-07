@@ -22,7 +22,7 @@ window.resize = resize
       </div>
       <style>
     #message{
-      position : absolute;
+      /* position : absolute; */
       width    : 400px;
       /* height   : 200px;
       left     : 50%;
@@ -40,6 +40,9 @@ window.resize = resize
 	#c {
 		width: 100%;
 		height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
 	}
     </style>
 <?php

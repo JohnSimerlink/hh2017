@@ -17,3 +17,6 @@
 - `apt update`
 - `apt install php5-mysqlnd`
 - `service apache2 restart`
+
+#
+- TODO: modify something like this for the title page: https://codepen.io/DannyJoris/pen/BrMgza
